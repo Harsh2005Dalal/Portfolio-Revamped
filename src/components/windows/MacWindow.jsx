@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {Rnd} from 'react-rnd'
 import './macwindow.scss'
+import { WindowStateContextData } from '../../context/WindowStateContext';
+import { WindowZIndexContextData } from '../../context/WindowZIndexContext';
 
-const MacWindow = ({children, height = "50vh", width = "30vw"}) => {
+const MacWindow = ({children, height = "50vh", width = "30vw" ,windowName}) => {
+    const windowStateData = useContext(WindowStateContextData);
+    const setWindowState = windowStateData.setWindowState;
+
+    const windowZIndexData = useContext(WindowZIndexContextData)
+    const windowZIndex = windowZIndexData.windowZIndex;
+    const setWindowZIndex = windowZIndexData.setWindowZIndex;
+
   return (
     <Rnd default={{
         width:width,
@@ -10,11 +19,20 @@ const MacWindow = ({children, height = "50vh", width = "30vw"}) => {
             x:300,
             y:200
         }}
+        style={{ zIndex: windowZIndex[windowName] , position: "relative",  }}
+        onMouseDown={()=>{
+            const maxValue = Math.max(...Object.values(windowZIndex));
+            {setWindowZIndex(state=>({...state,[windowName]:maxValue+1}))};
+            console.log(maxValue)
+        }}
     >
-        <div className="window no-bar">
+        <div 
+            className="window no-bar">
             <div className="nav">
                 <div className="dots">
-                    <div className="dot red"></div>
+                    <div 
+                        onClick={() => {setWindowState(state=>({...state,[windowName]:false}))}}
+                        className="dot red"></div>
                     <div className="dot yellow"></div>
                     <div className="dot green"></div>
                 </div>

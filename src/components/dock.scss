@@ -23,14 +23,25 @@
     aspect-ratio: 1/1;
     width:3.75rem;
     transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    position:relative;
 }
 
+.icon-line {
+    position: absolute;
+    bottom: -8px;      /* just below icon */
+    left: 15%;
+    right: 15%;
+    height: 3px;
+    background-color: #fff; /* or any color */
+    border-radius: 999px;
+  }
 .github, .cli{
     background: linear-gradient(to bottom, rgb(39, 36, 36), rgb(0,0,0));
 }
 
 .note{
     background: linear-gradient(to bottom, rgb(255, 159, 42), rgb(99, 60, 12));
+    box-shadow: 0 25px 60px -20px rgba(0, 0, 0, 0.5);
 }
 
 .pdf{

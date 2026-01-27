@@ -2,9 +2,9 @@ import React from 'react'
 import MacWindow from './MacWindow'
 import './spotify.scss'
 
-const Spotify = () => {
+const Spotify = ({windowName}) => {
   return (
-    <MacWindow width="25vw">
+    <MacWindow width="25vw" windowName={windowName}>
         <div className="spotify-window">
         <iframe data-testid="embed-iframe" style={{borderRadius:"12px"}} src="https://open.spotify.com/embed/album/6jKZplJpy21R5lHaYHHjmZ?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
