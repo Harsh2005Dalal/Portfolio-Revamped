@@ -1,6 +1,6 @@
 .window{
-    height:700px;
-    width:1000px;
+    // height:700px;
+    // width:1000px;
     background-color: black;
     border-radius: 0.75rem;
     overflow:hidden;
@@ -12,10 +12,6 @@
     
 }
 
-.no-bar::-webkit-scrollbar {
-    width:0;
-    display: none;             
-  }
 
 .nav{
     padding-inline: 0.75rem; 

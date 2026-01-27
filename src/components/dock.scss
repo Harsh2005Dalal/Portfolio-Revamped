@@ -1,6 +1,7 @@
 .dock{
     display:flex;
     position: absolute;
+    z-index:10;
     bottom: 1rem;
     left: 50%;
     transform: translate(-50%);

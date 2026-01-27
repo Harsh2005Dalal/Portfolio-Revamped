@@ -4,6 +4,9 @@ import Dock from './components/Dock'
 import Nav from './components/Nav'
 import MacWindow from './components/windows/MacWindow'
 import Github from './components/windows/Github'
+import Note from './components/windows/Note'
+import Resume from './components/windows/Resume'
+import Spotify from './components/windows/Spotify'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +17,9 @@ function App() {
       <Dock/>
 
       <Github/>
+      <Note/>
+      <Resume/>
+      <Spotify/>
     </main>
   )
 }

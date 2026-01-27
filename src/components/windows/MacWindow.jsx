@@ -2,14 +2,15 @@ import React from 'react'
 import {Rnd} from 'react-rnd'
 import './macwindow.scss'
 
-const MacWindow = ({children}) => {
+const MacWindow = ({children, height = "50vh", width = "30vw"}) => {
   return (
     <Rnd default={{
-        width:"30vw",
-        height:"40vh",
-        x:300,
-        y:200
-    }}>
+        width:width,
+        height:height,
+            x:300,
+            y:200
+        }}
+    >
         <div className="window no-bar">
             <div className="nav">
                 <div className="dots">

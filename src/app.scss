@@ -17,4 +17,16 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+*::-webkit-scrollbar {
+    width:8px;
+    // display: none;             
+  }
+
+*::-webkit-scrollbar-thumb{
+    background-color: rgb(44, 43, 43);
+    border-radius:4px;
 }
