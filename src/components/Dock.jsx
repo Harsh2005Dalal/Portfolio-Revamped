@@ -6,7 +6,6 @@ import { WindowStateContextData } from '../context/WindowStateContext'
 const DockShadow = ({active})=>{
 
   if(!active) return null;
-  console.log("HERE ME")
 
   return  (
     <div className="icon-line"
